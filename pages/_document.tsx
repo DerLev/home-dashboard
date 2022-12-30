@@ -35,14 +35,16 @@ class CustomDocument extends Document<NewDocumentInitialProps> {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" type="image/x-icon" />
           <style
             data-emotion-css={this.props?.ids?.join(' ')}
             dangerouslySetInnerHTML={{ __html: this.props.css }}
           />
+          {/* eslint-disable react/no-unescaped-entities */}
           <style>
             @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
           </style>
+          {/* eslint-enable react/no-unescaped-entities */}
         </Head>
         <body>
           <Main />
