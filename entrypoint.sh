@@ -3,7 +3,7 @@ set +x
 
 # config
 envFilename='.env.production'
-nextFolder='./.next/'
+nextFolder='./'
 
 function apply_path {
   # read all config file  
@@ -16,7 +16,7 @@ function apply_path {
     # split
     configName="$(cut -d'=' -f1 <<<"$line")"
     configValue="$(cut -d'=' -f2 <<<"$line")"
-    
+
     # get system env
     envValue=$(env | grep "^$configName=" | grep -oe '[^=]*$');
     
