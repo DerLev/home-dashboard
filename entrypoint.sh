@@ -30,5 +30,4 @@ function apply_path {
 }
 
 apply_path
-echo "Starting Nextjs"
 exec "$@"
